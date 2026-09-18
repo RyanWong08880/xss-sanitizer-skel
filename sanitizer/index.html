@@ -11,10 +11,10 @@
     <br />
     <button id="sanitize">Sanitize</button>
     <p>Output:</p>
-    <textarea disabled id="output"></textarea>
+    <textarea readonly id="output"></textarea>
     <p>Rendered:</p>
-    <iframe id="rendered" srcdoc=""></iframe>
-    <script src="sanitize.js"></script>
-    <script src="index.js"></script>
+    <iframe id="rendered" sandbox="" srcdoc=""></iframe>
+    <script src="sanitize.js" type="module"></script>
+    <script src="index.js" type="module"></script>
   </body>
 </html>

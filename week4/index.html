@@ -54,7 +54,7 @@
         <script>
           console.log("=========== 0.2 ===========");
 
-          const NAME = ""; // Put your name here
+          const NAME = "Ryan"; // Put your name here
           document.getElementById("0.2-act").textContent = "My name is " + NAME;
         </script>
       </article>
@@ -120,7 +120,24 @@
         <script>
           console.log("=========== 1.2 ===========");
 
+          let output = "";
           elements = document.getElementById("1.2-act").childNodes;
+          for (const node of elements) {
+            const list = [];
+            list.push(`${node.nodeName}`);
+            list.push(`${node.nodeType}`);
+            list.push(`${node.value}`);
+            list.push(`${node.textContent}`);
+
+            if (node.attributes) {
+              for (const attr of node.attributes) {
+              list.push(attr.name + " = " + attr.value);
+              }
+            }
+
+            console.log(list);
+          }
+          // output += document.getElementById("1.2-act").attributes;
           // Your code here
         </script>
       </article>
@@ -153,7 +170,14 @@
           </ol>
           <script>
             console.log("=========== 2.2 ===========");
-            const firstElement = document.getElementById("2.2-act-1");
+            var firstElement = document.getElementById("2.2-act-1");
+
+            while(firstElement.nextSibling) {
+              console.log(firstElement.textContent);
+              firstElement = firstElement.nextSibling;
+            }
+
+
             // Access the last element using the nextSibling property
           </script>
         </article>
@@ -176,7 +200,19 @@
           <script>
             console.log("=========== 2.3 ===========");
 
-            const middleElement = document.getElementById("2.3-act");
+            var middleElement = document.getElementById("2.3-act");
+
+            while(middleElement.previousSibling) {
+              console.log(middleElement.textContent);
+              middleElement= middleElement.previousSibling;
+            }
+            while(middleElement.nextSibling) {
+              console.log(middleElement.textContent);
+              middleElement = middleElement.nextSibling;
+            }
+
+
+
             // Access the last element using the nextSibling property
           </script>
         </article>
@@ -205,6 +241,8 @@
           <script>
             console.log("=========== 3.2 ===========");
             const worstParagraph = document.getElementById("3.2-act");
+            worstParagraph.textContent = "ACM Cyber is the best!";
+            worstParagraph.style = "";
           </script>
         </article>
       </article>
@@ -229,6 +267,7 @@
             console.log("=========== 3.3 ===========");
 
             const listElement = document.getElementById("3.3-act");
+            listElement.childNodes[1].remove();
             // Note that you will need to access the child element first!
           </script>
         </article>
@@ -245,7 +284,13 @@
       <script>
         console.log("=========== 4.0 ===========");
         // Hint: start traversing from the document element.
+        const queue = document.querySelectorAll("").childNodes;
+        while (queue.length() > 0) {
+          const curr = queue.pop();
 
+          curr.value = "aasdfsajflksjadfaskjfdlsakjflksajdfdfsdfsaf";
+          queue.push(curr.childNodes);
+        }
       </script>
     </section>
 

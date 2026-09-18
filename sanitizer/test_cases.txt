@@ -1,4 +1,0 @@
-<p>benign</p>
-<script>alert(1)</script><script>alert(2)</script>
-<img src onerror=alert(1)>
-<form><math><mtext></form><form><mglyph><style></math><img src onerror=alert(1)>
