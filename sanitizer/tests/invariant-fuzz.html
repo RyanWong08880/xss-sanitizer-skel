@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sanitizer Invariant Checks</title>
+  </head>
+  <body>
+    <main>
+      <h1>Sanitizer invariant checks</h1>
+      <p>
+        Runs a bounded, deterministic set of inert HTML variations against the
+        local sanitizer. No model, network service, or executable payloads are
+        involved.
+      </p>
+      <button id="run" type="button">Run checks</button>
+      <p id="summary" role="status" aria-live="polite"></p>
+      <ol id="results"></ol>
+    </main>
+    <script type="module" src="./invariant-fuzz.js"></script>
+  </body>
+</html>
