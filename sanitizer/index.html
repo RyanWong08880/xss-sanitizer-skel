@@ -6,10 +6,12 @@
     <title>XSS Sanitizer</title>
   </head>
   <body>
-    <p>Input:</p>
+    <label for="input">HTML input:</label>
     <textarea id="input"></textarea>
     <br />
     <button id="sanitize">Sanitize</button>
+    <button id="analyze-intent" type="button">Analyze intent</button>
+    <p id="intent-result" role="status" aria-live="polite"></p>
     <p>Output:</p>
     <textarea readonly id="output"></textarea>
     <p>Rendered:</p>
